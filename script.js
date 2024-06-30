@@ -175,5 +175,15 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(estadisticasSection);
   });
   
+window.onload = function() {
+    showPopup();
+};
 
+function showPopup() {
+    document.getElementById('popup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
 
