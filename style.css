@@ -338,7 +338,6 @@ footer {
     color: #182848;
 
 }
-
 .popup {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -368,3 +367,4 @@ footer {
     font-size: 20px;
     cursor: pointer;
 }
+
