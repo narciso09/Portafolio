@@ -177,4 +177,3 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
 
- listo carla ahora revisa los tres codigos y mira cual es la solucion para que la pagina sea resposive y que no dañe el diseño 
