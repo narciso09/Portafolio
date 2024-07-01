@@ -8,6 +8,11 @@ body {
     color: #fff;
     scroll-behavior: smooth;
 }
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
 .popup {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -18,13 +23,12 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 1000; 
-    color: azure
-
+    z-index: 1000;
+    color: azure;
 }
 
 .popup-content {
-    background-color: #182848;
+    background-color: blue;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -38,9 +42,8 @@ body {
     right: 10px;
     font-size: 20px;
     cursor: pointer;
- color; black
+    color: brown;
 }
-
 
 
 header {
