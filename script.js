@@ -1,14 +1,3 @@
-window.onload = function() {
-    showPopup();
-};
-
-function showPopup() {
-    document.getElementById('popup').style.display = 'flex';
-}
-
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
 document.addEventListener('DOMContentLoaded', function() {
     const carousels = document.querySelectorAll('.carousel');
 
@@ -186,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(estadisticasSection);
   });
   
-window.onload = function() {
+  window.onload = function() {
     showPopup();
 };
 
