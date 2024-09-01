@@ -9,49 +9,113 @@ body {
     scroll-behavior: smooth;
 }
 
-header {
-    border-bottom: 1px solid #ddd;
-    background: linear-gradient(90deg, #4b6cb7, #182848);
-    color: #fff;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .barra {
+        font-family: 'Lato', sans-serif;
+        /**Alto y ancho de donde se va a activar cuando pase el mouse**/
+        width:10%;
+        height:9%;
+        /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+        position:fixed;
+        /*Tiempo en el que va a transitar la animacion*/
+        transition: .4s all ;
+        /*este arriba de todo en la pantalla*/
+        z-index: 1;  
+    }
+    
+    .barra ul{
+        /*solucionar espacios no deseados*/
+        padding:0px;
+        text-align: center;
+            
+    }
+    .barra  li{
+        /*Velocidad de transicion del contenido*/
+        transition:all .3s;
+        list-style: none; 
+    }
+    
+    .barra a{
+        text-decoration: none;
+        
+        font-weight: normal;
+        
+        /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+        transition: .3s all ;
+        /*Se ocultan los elementos*/
+        font-size: 0px;
+        padding:0px;
+    }
+    
+    .barra  h2{
+        text-align: center;
+        color:white;
+        padding:7px;
+        padding-bottom:7px;
+    
+        /*Se oculta el h2*/
+        font-size:0px;   
+    }
+    
+    .barra img{
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+    
+    .barra:hover{
+        /*Tamaño cuando el cursor señale la barra*/
+        width: 70%;
+        height: 100vh;
+        
+        /*Color*/
+        background: rgba(5, 33, 51, 0.98);
+    }
+    .barra:hover h2{
+        /*posicion dentro de barra del h2*/
+        padding:15px;
+        font-size: 35px;
+    }
+    .barra:hover a{ 
+        font-size:20px ;
+        color:white;
+        /*Se usa el display block para que el enlace respete el margin*/
+        display: block;
+        padding:20px;
+    }
+    .barra:hover img{
+        /*Desaparecer la imagen*/
+        height:0px;
+    }
+    
+    
+    .barra:hover li{
+        border-top:1px solid #03121b;
+        /*Espacios entre las lineas y el contenido*/
+        
+        width:100%;
+            
+    }
+    .barra:hover ul:last-of-type{
+    
+    
+        border-bottom: 1px solid #03121b;
+    }
+    
+    .barra:hover a:hover{ 
+        font-size: 25px;
+        padding: 30px 0px; 
+        background: rgba(23, 78, 112, 0.98);  
+    }
+    
+    @media (min-width: 768px){
+        .barra:hover{
+        width: 45%;
+        }
+    }
+    
+div{
+    width: 100%;
 }
-
-header h1 {
-    margin: 0;
-    font-weight: 600;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ddd;
-}
-
 section {
     padding: 60px 0;
     background: linear-gradient(to right, #4b6cb7, #182848); /* Gradiente azul */
@@ -87,12 +151,14 @@ h2 {
 
 .carousel {
     overflow: hidden;
-    position: relative;
+    position: center;
+    
 }
 
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    
 }
 
 .project,
@@ -199,7 +265,7 @@ footer {
 /* Estilos del contenedor */
 .commitment-carousel {
     position: relative;
-    width: 100%;
+    
     overflow: hidden;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -344,40 +410,10 @@ footer {
     color: #182848;
 }
 
-.popup {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    color: #248;
-}
 
-.popup-content {
-    background-color: #f3eeeeee;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #000;
-}
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 100%) {
     .container {
         width: 90%;
     }
